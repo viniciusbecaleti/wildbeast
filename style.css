@@ -17,8 +17,20 @@ a {
 
 img {
    display: block;
+   width: 100%;
    max-width: 100%;
    border-radius: 4px;
+}
+
+.col-wide {
+   grid-column: 1 / -1;
+}
+
+p {
+   font-size: 1.2rem;
+   line-height: 1.6;
+   letter-spacing: -0.005rem;
+   color: rgba(0, 0, 0, 0.7);
 }
 
 /* grid geral */
@@ -49,7 +61,7 @@ img {
 .menu {
    display: flex;
    flex-wrap: wrap;
-   gap: 20px;
+   gap: 30px;
 }
 
 .menu a {
@@ -75,7 +87,7 @@ img {
 
 .sidenav ul {
    display: grid;
-   gap: 20px;
+   gap: 30px;
 }
 
 .sidenav a {
@@ -97,6 +109,110 @@ img {
 /* content */
 .content {
    grid-area: content;
+   max-width: 960px;
+   margin: 0 auto;
+   padding: 30px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 30px;
+}
+
+.titulo {
+   color: #b07dfb;
+}
+
+.titulo h1 {
+   font-size: 3.75rem;
+   line-height: 1;
+   font-weight: 700;
+}
+
+.titulo span {
+   font-size: 0.875rem;
+   font-style: italic;
+}
+
+.caracteristicas {
+   display: flex;
+   align-items: flex-start;
+   gap: 30px;
+}
+
+.caracteristicas-item {
+   width: 80px;
+   text-align: center;
+   background: linear-gradient(135deg, #8844ee, #b07dfb);
+   border-radius: 4px;
+   box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
+   position: relative;
+}
+
+.caracteristicas-item span {
+   display: block;
+   color: #b07dfb;
+}
+
+.caracteristicas-item .numero {
+   font-size: 3rem;
+   line-height: 1;
+   padding: 10px 0;
+}
+
+.caracteristicas-item .rotulo {
+   background: #ffffff;
+   border-radius: 0 0 4px 4px;
+   padding: 5px 0;
+   position: relative;
+   top: 2px;
+}
+
+.imagem-1 {
+   grid-row: span 2;
+}
+
+.imagem-1, .imagem-2 {
+   align-self: end;
+}
+
+.destaque {
+   font-size: 0.875rem;
+   color: #b07dfb;
+   max-width: 30ch;
+}
+
+.citacao, .atributos {
+   padding: 30px;
+   border-radius: 4px;
+   box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
+   background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+.citacao p {
+   max-width: 35ch;
+   margin: 0 auto;
+   font-size: 1.5rem;
+   font-style: italic;
+   text-align: center;
+   color: #ffffff;
+}
+
+.atributos {
+   align-self: start;
+}
+
+.atributos li {
+   color: #ffffff;
+   font-family: Courier, monospace;
+   font-size: 1.125rem;
+   padding: 15px;
+}
+
+.atributos li + li {
+   border-top: 2px solid #b07dfb;
+}
+
+.informacoes p + p {
+   margin-top: 30px;
 }
 
 /* anuncios */
@@ -106,7 +222,7 @@ img {
    padding: 30px;
    display: grid;
    align-content: start;
-   gap: 20px;
+   gap: 30px;
 }
 
 /* footer */
