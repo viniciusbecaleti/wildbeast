@@ -16,7 +16,9 @@ a {
 }
 
 img {
+   display: block;
    max-width: 100%;
+   border-radius: 4px;
 }
 
 /* grid geral */
@@ -100,9 +102,21 @@ img {
 /* anuncios */
 .anuncios {
    grid-area: anuncios;
+   background: #fafbfc;
+   padding: 30px;
+   display: grid;
+   align-content: start;
+   gap: 20px;
 }
 
 /* footer */
 .footer {
    grid-area: footer;
+   background: linear-gradient(135deg, #8844ee, #b07dfb);
+   padding: 30px;
+}
+
+.footer p {
+   color: #ffffff;
+   text-align: center;
 }
