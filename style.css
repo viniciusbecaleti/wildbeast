@@ -16,7 +16,7 @@ a {
 }
 
 img {
-   max-width: 100px;
+   max-width: 100%;
 }
 
 /* grid geral */
@@ -30,22 +30,56 @@ img {
    ;
 }
 
+/* header */
 .header {
    grid-area: header;
+   background: linear-gradient(135deg, #8844ee, #b07dfb);
+   padding: 30px;
+   display: grid;
+   grid-template-columns: 1fr auto;
+   align-items: center;
 }
 
+.logo {
+   max-width: 200px;
+}
+
+.menu {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.menu a {
+   display: block;
+   padding: 10px;
+   color: #ffffff;
+   font-size: 1.125rem;
+   background: rgba(0, 0, 0, 0.1);
+   border-radius: 4px;
+   transition: background 0.1s;
+}
+
+.menu a:hover {
+   background: rgba(0, 0, 0, 0.5);
+}
+
+/* sidenav */
 .sidenav {
    grid-area: sidenav;
 }
 
+/* content */
 .content {
    grid-area: content;
 }
 
+/* anuncios */
 .anuncios {
    grid-area: anuncios;
 }
 
+/* footer */
 .footer {
    grid-area: footer;
 }
