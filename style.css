@@ -52,6 +52,7 @@ p {
    display: grid;
    grid-template-columns: 1fr auto;
    align-items: center;
+   gap: 30px;
 }
 
 .logo {
@@ -235,4 +236,91 @@ p {
 .footer p {
    color: #ffffff;
    text-align: center;
+}
+
+/* medias querys */
+@media (max-width: 1200px) {
+   .estrutura {
+      grid-template-areas:
+         "header header header"
+         "sidenav content content"
+         "sidenav anuncios anuncios"
+         "footer footer footer"
+      ;
+   }
+
+   .anuncios {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+@media (max-width: 768px) {
+   .estrutura {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+         "header"
+         "sidenav"
+         "content"
+         "anuncios"
+         "footer"
+      ;
+   }
+
+   .header {
+      grid-template-columns: 1fr;
+   }
+
+   .menu {
+      gap: 15px;
+   }
+
+   .menu a {
+      font-size: 1rem;
+   }
+
+   .sidenav {
+      overflow-x: auto;
+      position: relative;
+   }
+
+   @keyframes seta {
+      from {
+         right: 30px;
+      }
+
+      to {
+         right: 20px;
+      }
+   }
+
+   .sidenav::after {
+      content: "→";
+      position: absolute;
+      top: 5px;
+      right: 30px;
+      color: rgba(0, 0, 0, 0.3);
+      animation: seta 0.5s ease-in 0s infinite alternate;
+   }
+
+   .sidenav ul {
+      display: flex;
+   }
+
+   .sidenav li {
+      flex: 1 0 60px;
+   }
+
+   .sidenav li:last-child a {
+      margin-right: 30px;
+   }
+}
+
+@media (max-width: 600px) {
+   .content {
+      grid-template-columns: 1fr;
+   }
+
+   .anuncios {
+      grid-template-columns: 1fr;
+   }
 }
